@@ -1,0 +1,29 @@
+<script>
+  //mutable object:
+  const character = { name: 'Haha'};
+  character.role = 'captain';
+  console.log(character);  //could lead to unintened problems if object is referenced in more places
+
+//mutable array
+  const names = ['Haha', 'Luke'];
+  names.push('R2-D2');
+
+  console.log(names);
+
+  //imutable by design: Strings, Numbers
+  const name = 'Han Solo';
+  const uppercaseName = name.toUpperCase(name);
+
+  //imutable operations on object
+  const character2 = { name: 'Han Solo'};
+  const updatedCharacter = { ...character2, role: 'captain'};
+  console.log(character2, updatedCharacter);
+
+  //imutable operations on array
+  const namesImmutable = ['Arthur Dent', 'Vogon'];
+  const updatedNames = [...namesImmutable, 'R2-D2'];
+  console.log(updatedNames);
+
+</script>
+
+
